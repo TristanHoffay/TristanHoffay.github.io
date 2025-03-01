@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan Hub</title>
+    <link rel="icon" type="image/png" href="bigpixd.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: linear-gradient(rgb(13, 12, 17)20%, rgb(0, 0, 0) 60%, rgb(6, 10, 8) 100%);">
+    <div class="topbar">
+        <div class="toptitle">
+            <img style="width: 50px;" src="bigpixd.png" alt="Deluxe Elf">
+            <h1 class="topTitle">
+                Tristan's Website
+            </h1>
+            <div  id="playground"><a href="./playground/index.html"><h3>PLAY<br>GROUND</h3></a></div>
+        </div>
+        <div class="tabs">
+            <a href="index.html">Home</a>
+            <a class="activePage" style="background-color: rgb(13, 12, 17);">Coding Projects</a>
+            <a href="games.html">Games</a>
+            <a href="photography.html">Photography</a>
+            <a href="music.html">Music</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="sidebars-code" style="min-height: 88vh">
+        <div></div>
+            <div class="sidebar-code"></div>
+                <div class="projects">
+                    
+                    <div class="project">
+                        <div>
+                            <h1><a href="index.html"><img src="bigpixd.png" alt="Website Icon" style="width: 48px;"> Website</a></h1>
+                            <h3 style="margin: 0;">Created March 28, 2023</h3>
+                            <i>Uploaded to GitHub Pages February 28, 2025</i>
+                            <h2>The main resource of information about me and my projects.<br>You're looking at it.</h2>
+                            <p>
+                                I created this website as a place to catalog and demonstrate my many hobbies and projects. I opted for a more simple, static design rather than an over-the-top bombardment of transitions and effects in an attempt to impress. This might change as the site continues development, but my main goal will always be unique simplicity.
+                            </p>
+                        </div>
+                        <div style="text-align:center;">
+                            <div class="proj-image">
+                                <div class="topbar">
+                                    <div class="toptitle">
+                                        <img style="width: 50px;" src="bigpixd.png" alt="Deluxe Elf">
+                                        <h1 class="topTitle">
+                                            Tristan's Website
+                                        </h1>
+                                    </div>
+                                    <div class="tabs" style="color: rgb(127, 240, 255);">
+                                        <a href="index.html">Home</a>
+                                        <a class="activePage" style="background-color: rgb(13, 12, 17);">Coding Projects</a>
+                                        <a href="games.html">Games</a>
+                                        <a href="photography.html">Photography</a>
+                                        <a href="music.html">Music</a>
+                                        <a href="about.html">About</a>
+                                        <a href="contact.html">Contact</a>
+                                    </div>
+                        
+                                </div>
+                        
+                                <div class="sidebars-code">
+                                    <div></div>
+                                        <div class="sidebar-code"></div>
+                                            <div class="projects">
+                                                <div class="project">
+                                                    <div>
+                                                        <h1>Project</h1>
+                                                        <p>
+                                                            This is a really cool project. Wow very impressive. You should totally check it out.
+                                                        </p>
+                                                    </div>
+                                                    <div style="text-align:center">
+                                                        <div></div>
+                                                        <p>Wow what a cool project right?</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="sidebar-code"></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <i>This page as it existed during creation (with the sidebar effect added)</i>
+                        </div>
+                    </div>
+
+
+                    <hr color="purple" width="90%">
+
+                    <div class="project">
+                        <div>
+                            <h1><a href="https://github.com/TristanHoffay/Productivity-Stopwatch"><img src="pictures/stopwatch_icon.png" alt="Stopwatch Icon"> Productivity Stopwatch</a></h1>
+                            <h3>Created March 12, 2024</h3>
+                            <h2>A simple GUI stopwatch with pausing, logging, and data analysis capabilities. Written in Python using Tkinter and Pandas.</h2>
+                            <p>
+                                I needed a reliable stopwatch for tracking time spent working on projects, both paid and personal. More importantly, I needed a way to log that time, including any breaks and pauses.<br>This project is the solution to such an issue, and provides a reliable time-tracking solution for those of us who like to keep track of their temporal expenditure.
+                            </p>
+                        </div>
+                        <div style="text-align:center;">
+                            <div class="proj-image">
+                                <img src="pictures/stopwatch2.png" alt="Default Stopwatch GUI">
+                                <img src="pictures/stopwatch.png" alt="Stopwatch GUI">
+                                <img src="pictures/stopwatch_log.png" alt="Stopwatch Log">
+                            </div>
+                            <i>(Top) The GUI of the stopwatch, with text entries for title, subtitle, and an additional variable</i>
+                            <br><i>(Bottom) An example of the log created by the stopwatch</i>
+                        </div>
+                    </div>
+
+                    <hr color="purple" width="90%">
+
+                    <div class="project">
+                        <div>
+                            <h1><a href="https://github.com/TristanHoffay/Statement-Analyzer"><img src="pictures/statementanalyzer_icon.png" alt="Statement Analyzer Icon"> Bank Statement Analyzer</a></h1>
+                            <h3>Created July 20, 2024</h3>
+                            <h2>A Python script that allows the user to scrape transaction information from bank statements from a number of banks and account types.</h2>
+                            <p>
+                                This project is a single (as of now) Python script that provides options for the user that involve scraping transactions and their information straight from PDF bank statements. The scraped data is stored in multiple CSV files, one for each account as well as compiled supersets of entire banks and all data.<br> The script uses JSON storage to keep track of which statements have been read and if the compiled data has been modified, and is able to update the data with new statements accordingly.
+                            </p>
+                        </div>
+                        <div style="text-align:center;">
+                            <div class="proj-image">
+                                <img src="pictures/finance.png" alt="Statement Analyzer CLI Options">
+                                <img src="pictures/finance2.png" alt="Statement Analyzer Compiled DataFrame Info">
+                            </div>
+                            <i>(Top) The options available to the user in the CLI, allowing updating, recompiling, or viewing of scraped data</i>
+                            <br><i>(Bottom) Info for the DataFrame of compiled transactions retrieved using the script</i>
+                        </div>
+                    </div>
+
+                    <hr color="purple" width="90%">
+
+                    <div class="project">
+                        <div>
+                            <h1><a href="https://github.com/TristanHoffay/Pynesweeper"><img src="pictures/minesweeper_icon.png" alt="Python Minesweeper Icon" style="width: 48px;"> Python Minesweeper</a></h1>
+                            <h3>Created February 24, 2024</h3>
+                            <h2>A simple implementation of the classic Minesweeper using Python with Tkinter for the GUI.</h2>
+                            <p>
+                                In an effort to both familiarize myself with Python and Tkinter and to create a simple puzzle game for my sudoku-loving girlfriend to play, I decided on writing a version of Minesweeper, seeing as the default Tkinter GUI looked very reminiscent of the classic look.
+                                <br>You can set the number of spaces on both the horizontal and vertical axis, as well as the number of mines. When you lose, you have the option to continue in "Baby Mode", where the board turns blue and you can continue after hitting a mine.
+                            </p>
+                        </div>
+                        <div style="text-align:center;">
+                            <div class="proj-image">
+                                <img src="pictures/minesweeper1.png" alt="Statement Analyzer CLI Options" style="width: 53%;">
+                                <img src="pictures/minesweeper2.png" alt="Statement Analyzer Compiled DataFrame Info" style="width: 45%;">
+                                <img src="pictures/minesweeper3.png" alt="Statement Analyzer Compiled DataFrame Info">
+                            </div>
+                            <i>The minesweeper playing board, constructed using Tkinter</i>
+                        </div>
+                    </div>
+
+
+                    <div class="slidecontainer" style="text-align: center;">
+                        <input type="range" min="0" max="255" value="0" class="slider" id="rslide">
+                        <input type="range" min="0" max="255" value="255" class="slider" id="gslide">
+                        <input type="range" min="0" max="255" value="0" class="slider" id="bslide">
+                      </div>
+
+                    <div class="slidecontainer" style="text-align: center;">
+                        <input type="range" min="0.1" max="100" value="10" class="slider" id="speed">
+                        <input type="range" min="0" max="300" value="30" class="slider" id="freq">
+                        <input type="range" min="0" max="10" value="2" class="slider" id="fade">
+                      </div>
+                </div>
+            <div class="sidebar-code"></div>
+        <div></div>
+    </div>
+    <script src="codebars.js"></script>
+</body>
+</html>

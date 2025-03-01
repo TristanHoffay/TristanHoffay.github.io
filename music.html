@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan Hub</title>
+    <link rel="icon" type="image/png" href="bigpixd.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b418a68167.js" crossorigin="anonymous"></script>
+
+    <script>
+        function setTrack(title, source, image) {
+            document.getElementById('trackPlayingTitle').innerHTML = title
+            document.getElementById('musicSource').src=source;
+            document.getElementById('musicControl').load();
+            document.getElementById('musicControl').play();
+            document.getElementById('playerContainer').style.backgroundImage = image;
+            if (image == "url(\'music/musictocodeto/cover.png\')") {
+                document.getElementById('playerContainer').style.backgroundPositionY = "-270px";
+            }
+            else if (image == "url(\'music/fabrication/cover.jpg\')") {
+                document.getElementById('playerContainer').style.backgroundPositionY = "-650px";
+            }
+            else if (image == "url(\'music/dreamsanddelusions/cover.png\')") {
+                document.getElementById('playerContainer').style.backgroundPositionY = "-150px";
+            }
+            else if (image == "url(\'music/stealindaltons/cover.png\')") {
+                document.getElementById('playerContainer').style.backgroundPositionY = "-230px";
+            }
+        }
+    </script>
+
+</head>
+<body style="background-image: linear-gradient(rgb(0, 15, 56),rgb(36, 0, 56) 25%,rgb(49, 0, 23) 60%, rgb(2, 22, 0) 85%,rgb(1, 2, 0) 100%);">
+    <div class="topbar">
+        <div class="toptitle">
+            <img style="width: 50px;" src="bigpixd.png" alt="Deluxe Elf">
+            <h1 class="topTitle">
+                Tristan's Website
+            </h1>
+            <div  id="playground"><a href="./playground/index.html"><h3>PLAY<br>GROUND</h3></a></div>
+        </div>
+        <div class="tabs">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Coding Projects</a>
+            <a href="games.html">Games</a>
+            <a href="photography.html">Photography</a>
+            <a class="activePage" style="background-color: rgb(30, 206, 74); color:rgb(0, 34, 3)">Music</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    
+    <div style="min-height: 1000px">
+        
+        <div id="playerContainer" class="player">
+            <div>
+                <h2>Now Playing - <strong id="trackPlayingTitle">Divide By Zero</strong></h2>
+                <audio controls id="musicControl">
+                    <source id="musicSource" src="music/musictocodeto/Divide By Zero.mp3">
+                </audio>
+            </div>
+        </div>
+        <!-- should change to some sort of object structure, or read directly from whatever is in the music directory -->
+        <div class="album">
+            <img src="music/musictocodeto/cover.png" alt="Music To Code To">
+            <div style="margin-left: 80px">
+                <h3>Music To Code To</h3>
+                <ol>
+                    <li>namespace DeluxeDoods {
+                        <button onclick="setTrack('namespace DeluxeDoods {', 'music/musictocodeto/namespace DeluxeDoods {.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>public class MusicToCodeTo {
+                        <button onclick="setTrack('public class MusicToCodeTo', 'music/musictocodeto/public class MusicToCodeTo {.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>Divide By Zero
+                        <button onclick="setTrack('Divide By Zero', 'music/musictocodeto/Divide By Zero.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>The Process
+                        <button onclick="setTrack('The Process', 'music/musictocodeto/The Process.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>Digital Landscape
+                        <button onclick="setTrack('Digital Landscape', 'music/musictocodeto/Digital Landscape.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>Electronic Intelligence
+                        <button onclick="setTrack('Electronic Intelligence', 'music/musictocodeto/Electronic Intelligence.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>Headache
+                        <button onclick="setTrack('Headache', 'music/musictocodeto/Headache.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>In The Zone
+                        <button onclick="setTrack('In The Zone', 'music/musictocodeto/In The Zone.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Keyboard Blues
+                        <button onclick="setTrack('Keyboard Blues', 'music/musictocodeto/Keyboard Blues.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Memory Leak
+                        <button onclick="setTrack('Memory Leak', 'music/musictocodeto/Memory Leak.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Caffeine at 3 AM
+                        <button onclick="setTrack('Caffeine at 3 AM', 'music/musictocodeto/Caffeine at 3 AM.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Brainstorm
+                        <button onclick="setTrack('Brainstorm', 'music/musictocodeto/Brainstorm.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>unsigned int
+                        <button onclick="setTrack('unsigned int', 'music/musictocodeto/unsigned int.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>The Static Void
+                        <button onclick="setTrack('The Static Void', 'music/musictocodeto/The Static Void.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Fatal Error
+                        <button onclick="setTrack('Fatal Error', 'music/musictocodeto/Fatal Error.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Forgot The Semicolon
+                        <button onclick="setTrack('Forgot The Semicolon', 'music/musictocodeto/Forgot The Semicolon.mp3', 'url(\'music/musictocodeto/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="album">
+            <img src="music/fabrication/cover.jpg" alt="Fabrication">
+            <div style="margin-left: 80px">
+                <h3>Fabrication</h3>
+                <ol>
+                    <li>Suddenly
+                        <button onclick="setTrack('Suddenly', 'music/fabrication/Suddenly.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button></li>
+                    <li>From the Earth
+                        <button onclick="setTrack('From the Earth', 'music/fabrication/From the Earth.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Lunar Lullaby
+                        <button onclick="setTrack('Lunar Lullaby', 'music/fabrication/Lunar Lullaby.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Cast From the Cosmos
+                        <button onclick="setTrack('Cast From the Cosmos', 'music/fabrication/Cast From the Cosmos.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Meet the Skyline
+                        <button onclick="setTrack('Meet the Skyline', 'music/fabrication/Meet the Skyline.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Reign of Stars
+                        <button onclick="setTrack('Reign of Stars', 'music/fabrication/Reign of Stars.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Break Ground
+                        <button onclick="setTrack('Break Ground', 'music/fabrication/Break Ground.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>New Life 2
+                        <button onclick="setTrack('New Life 2', 'music/fabrication/New Life 2.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Awakening
+                        <button onclick="setTrack('Awakening', 'music/fabrication/Awakening.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Anime Truck Stop
+                        <button onclick="setTrack('Anime Truck Stop', 'music/fabrication/Anime Truck Stop.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Pseudo-Compliance
+                        <button onclick="setTrack('Pseudo-Compliance', 'music/fabrication/Pseudo-Compliance.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Pulsing Circuits
+                        <button onclick="setTrack('Pulsing Circuits', 'music/fabrication/Pulsing Circuits.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Manufactured Comfort
+                        <button onclick="setTrack('Manufactured Comfort', 'music/fabrication/Manufactured Comfort.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Seismic Rave Phase
+                        <button onclick="setTrack('Seismic Rave Phase', 'music/fabrication/Seismic Rave Phase.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Logic Gate
+                        <button onclick="setTrack('Logic Gate', 'music/fabrication/Logic Gate.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Ratastewie's Theme (from 'The Rise and Fall of Ratastewie')
+                        <button onclick="setTrack('Ratastewie\'s Theme (from \'The Rise and Fall of Ratastewie\')', 'music/fabrication/Ratastewie\'s Theme.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Unreality
+                        <button onclick="setTrack('Unreality', 'music/fabrication/Unreality.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Mechanical Tendencies
+                        <button onclick="setTrack('Mechanical Tendencies', 'music/fabrication/Mechanical Tendencies.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Artificial Life
+                        <button onclick="setTrack('Artificial Life', 'music/fabrication/Artificial Life.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Cosmic Light Show
+                        <button onclick="setTrack('Cosmic Light Show', 'music/fabrication/Cosmic Light Show.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Mischievous Man
+                        <button onclick="setTrack('Mischievous Man', 'music/fabrication/Mischievous Man.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Burst of Simulated Humanity
+                        <button onclick="setTrack('Burst of Simulated Humanity', 'music/fabrication/Burst of Simulated Humanity.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Take That
+                        <button onclick="setTrack('Take That', 'music/fabrication/Take That.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Glimpse of Joy
+                        <button onclick="setTrack('Glimpse of Joy', 'music/fabrication/Glimpse of Joy.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Anthology of Emotions
+                        <button onclick="setTrack('Anthology of Emotions', 'music/fabrication/Anthology of Emotions.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Synthetic Mind
+                        <button onclick="setTrack('Synthetic Mind', 'music/fabrication/Synthetic Mind.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Psychic Acoustics
+                        <button onclick="setTrack('Psychic Acoustics', 'music/fabrication/Psychic Acoustics.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Old Life
+                        <button onclick="setTrack('Old Life', 'music/fabrication/Old Life.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Corporium
+                        <button onclick="setTrack('Corporium', 'music/fabrication/Corporium.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Realm of Solitude
+                        <button onclick="setTrack('Realm of Solitude', 'music/fabrication/Realm of Solitude.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Remnants of the Void
+                        <button onclick="setTrack('Remnants of the Void', 'music/fabrication/Remnants of the Void.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Race to Enlightenment
+                        <button onclick="setTrack('Race to Enlightenment', 'music/fabrication/Race to Enlightenment.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Magma Halls and Your Feet Off the Floor
+                        <button onclick="setTrack('Brainstorm', 'music/fabrication/Magma Halls and Your Feet Off the Floor.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Peace Beyond the Gate
+                        <button onclick="setTrack('Peace Beyond the Gate', 'music/fabrication/Peace Beyond the Gate.mp3', 'url(\'music/fabrication/cover.jpg\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="album">
+            <img src="music/dreamsanddelusions/cover.png" alt="Dreams and Delusions">
+            <div style="margin-left: 80px">
+                <h3>Dreams and Delusions</h3>
+                <ol>
+                    <li>First Sight
+                        <button onclick="setTrack('First Sight', 'music/dreamsanddelusions/First Sight.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>City Lights
+                        <button onclick="setTrack('City Lights', 'music/dreamsanddelusions/City Lights.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Intrigue
+                        <button onclick="setTrack('Intrigue', 'music/dreamsanddelusions/Intrigue.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Through the Night
+                        <button onclick="setTrack('Through the Night', 'music/dreamsanddelusions/Through the Night.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>New Life
+                        <button onclick="setTrack('New Life', 'music/dreamsanddelusions/New Life.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Different Day
+                        <button onclick="setTrack('Different Day', 'music/dreamsanddelusions/Different Day.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Stand Up
+                        <button onclick="setTrack('Stand Up', 'music/dreamsanddelusions/Stand Up.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>All the Way
+                        <button onclick="setTrack('All the Way', 'music/dreamsanddelusions/All the Way.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Sounds the Same
+                        <button onclick="setTrack('Sounds the Same', 'music/dreamsanddelusions/Sounds the Same.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Have You Tried
+                        <button onclick="setTrack('Have You Tried', 'music/dreamsanddelusions/Have You Tried.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Just a Game
+                        <button onclick="setTrack('Just a Game', 'music/dreamsanddelusions/Just a Game.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Other Side
+                        <button onclick="setTrack('Other Side', 'music/dreamsanddelusions/Other Side.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Paths That Wind
+                        <button onclick="setTrack('Paths That Wind', 'music/dreamsanddelusions/Paths That Wind.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Moving On
+                        <button onclick="setTrack('Moving On', 'music/dreamsanddelusions/Moving On.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Clear Your Mind
+                        <button onclick="setTrack('Clear Your Mind', 'music/dreamsanddelusions/Clear Your Mind.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Fear is Gone
+                        <button onclick="setTrack('Fear is Gone', 'music/dreamsanddelusions/Fear is Gone.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Checkered Flag
+                        <button onclick="setTrack('Checkered Flag', 'music/dreamsanddelusions/Checkered Flag.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Within Grasp
+                        <button onclick="setTrack('Within Grasp', 'music/dreamsanddelusions/Within Grasp.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Take Your Time
+                        <button onclick="setTrack('Take Your Time', 'music/dreamsanddelusions/Take Your Time.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>While it Lasts
+                        <button onclick="setTrack('While it Lasts', 'music/dreamsanddelusions/While it Lasts.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Life is Great
+                        <button onclick="setTrack('Life is Great', 'music/dreamsanddelusions/Life is Great.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Change of Plans
+                        <button onclick="setTrack('Change of Plans', 'music/dreamsanddelusions/Change of Plans.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Wake Up Late
+                        <button onclick="setTrack('Wake Up Late', 'music/dreamsanddelusions/Wake Up Late.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Procrastinate
+                        <button onclick="setTrack('Procrastinate', 'music/dreamsanddelusions/Procrastinate.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Out of Time
+                        <button onclick="setTrack('Out of Time', 'music/dreamsanddelusions/Out of Time.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>No End Goal
+                        <button onclick="setTrack('No End Goal', 'music/dreamsanddelusions/No End Goal.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Little Care
+                        <button onclick="setTrack('Little Care', 'music/dreamsanddelusions/Little Care.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Almost There
+                        <button onclick="setTrack('Almost There', 'music/dreamsanddelusions/Almost There.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Droning On
+                        <button onclick="setTrack('Droning On', 'music/dreamsanddelusions/Droning On.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Failure
+                        <button onclick="setTrack('Failure', 'music/dreamsanddelusions/Failure.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>It doesn't have to be this way
+                        <button onclick="setTrack('It doesn\'t have to be this way', 'music/dreamsanddelusions/idhtbtw.mp3', 'url(\'music/dreamsanddelusions/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="album">
+            <img src="music/stealindaltons/cover.png" alt="Stealin\' Daltons">
+            <div style="margin-left: 80px">
+                <h3>Stealin' Daltons</h3>
+                <ol>
+                    <li>Deluxe Days
+                        <button onclick="setTrack('Deluxe Days', 'music/stealindaltons/Deluxe Days.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Fester's Funky Funhouse
+                        <button onclick="setTrack('Fester\'s Funky Funhouse', 'music/stealindaltons/Fester\'s Funky Funhouse.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>B Site
+                        <button onclick="setTrack('B Site', 'music/stealindaltons/B Site.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Deluxity
+                        <button onclick="setTrack('Deluxity', 'music/stealindaltons/Deluxity.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Late Night
+                        <button onclick="setTrack('Late Night', 'music/stealindaltons/Late Night.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Slime Lord
+                        <button onclick="setTrack('Slime Lord', 'music/stealindaltons/Slime Lord.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Blue Horizon
+                        <button onclick="setTrack('Blue Horizon', 'music/stealindaltons/Blue Horizon.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Deep Sea
+                        <button onclick="setTrack('Deep Sea', 'music/stealindaltons/Deep Sea.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Wreckage
+                        <button onclick="setTrack('Wreckage', 'music/stealindaltons/Wreckage.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Granny's Home-Baked Beats (100- Fruity Fresh)
+                        <button onclick="setTrack('Granny\'s Home-Baked Beats (100- Fruity Fresh)', 'music/stealindaltons/granny.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Jimbo's Junkyard Jamboree
+                        <button onclick="setTrack('Jimbo\'s Junkyard Jamboree', 'music/stealindaltons/JJJ.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Jimbo's Crank Prank
+                        <button onclick="setTrack('Jimbo\'s Crank Prank', 'music/stealindaltons/Jimbo\'s Crank Prank.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Breaking Through
+                        <button onclick="setTrack('Breaking Through', 'music/stealindaltons/Breaking Through.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>House, A Rest
+                        <button onclick="setTrack('House, A Rest', 'music/stealindaltons/House, A Rest.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Beyond
+                        <button onclick="setTrack('Beyond', 'music/stealindaltons/Beyond.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Grimeblet
+                        <button onclick="setTrack('Grimeblet', 'music/stealindaltons/Grimeblet.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Graveyard Shift
+                        <button onclick="setTrack('Graveyard Shift', 'music/stealindaltons/Graveyard Shift.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Mt. Baker
+                        <button onclick="setTrack('Mt. Baker', 'music/stealindaltons/Mt. Baker.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Mt. Baker Summit
+                        <button onclick="setTrack('Mt. Baker Summit', 'music/stealindaltons/Mt. Baker Summit.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>The Beast
+                        <button onclick="setTrack('The Beast', 'music/stealindaltons/The Beast.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>The Hero Has Won
+                        <button onclick="setTrack('The Hero Has Won', 'music/stealindaltons/The Hero Has Won.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>A Site
+                        <button onclick="setTrack('A Site', 'music/stealindaltons/A Site.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Jimbo's Crap Plot
+                        <button onclick="setTrack('Jimbo\'s Crap Plot', 'music/stealindaltons/Jimbo\'s Crap Plot.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Harmonic Ambience
+                        <button onclick="setTrack('Harmonic Ambience', 'music/stealindaltons/Harmonic Ambience.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Battle Beat
+                        <button onclick="setTrack('Battle Beat', 'music/stealindaltons/Battle Beat.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Eastern Ambience
+                        <button onclick="setTrack('Eastern Ambience', 'music/stealindaltons/Eastern Ambience.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Never Looking Up
+                        <button onclick="setTrack('Never Looking Up', 'music/stealindaltons/Never Looking Up.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Desert Madness
+                        <button onclick="setTrack('Desert Madness', 'music/stealindaltons/Desert Madness.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Drifting
+                        <button onclick="setTrack('Drifting', 'music/stealindaltons/Drifting.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Dire Consequences
+                        <button onclick="setTrack('Dire Consequences', 'music/stealindaltons/Dire Consequences.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>WTF
+                        <button onclick="setTrack('WTF', 'music/stealindaltons/WTF.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Godawful Trash
+                        <button onclick="setTrack('Godawful Trash', 'music/stealindaltons/Godawful Trash.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Bad Bad Ripoff (Don't Sue Me)
+                        <button onclick="setTrack('Bad Bad Ripoff (Don\'t Sue Me)', 'music/stealindaltons/Bad Bad Ripoff (Don\'t Sue Me).mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                    <li>Kitchen Wave
+                        <button onclick="setTrack('Kitchen Wave', 'music/stealindaltons/Kitchen Wave.mp3', 'url(\'music/stealindaltons/cover.png\')')">
+                            <i class="fa-solid fa-play"></i> Play</button>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

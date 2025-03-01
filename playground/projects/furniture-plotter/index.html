@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Furniture V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href = "../../index.html" style="color: cyan;">Home</a>
+    <div id="window">
+        <div id="canvasView">
+            <canvas id="Layout"></canvas>
+            <h3 style="margin: 5px;">Hold wall or furniture and press: R-rotate, D-duplicate, X-remove, N-name*, C-color*. ( * - Furniture Only)</h3>
+        </div>
+        <div id="controlPanel">
+            <div id="jsonField">
+                <h3>Layout Data: </h3>
+                <textarea id="jsonData"></textarea>
+                <button style="margin-top: 5%;" id="importBtn">Import Data</button>
+                <button id="exportBtn">Export Data</button>
+            </div>
+            <div id="slidecontainer">
+                <div style="margin-bottom: 5%;">
+                    <h3>Furniture Color</h3>
+                    <input type="checkbox" id="useColor" style="width: 25px; height: 25px;vertical-align:middle;">
+                    <label>Use Color</label>
+                </div>
+                <label>R</label>
+                <input type="range" min="0" max="255" value="0" class="slider" id="rslide">
+                <br><label>G</label>
+                <input type="range" min="0" max="255" value="255" class="slider" id="gslide">
+                <br><label>B</label>
+                <input type="range" min="0" max="255" value="0" class="slider" id="bslide">
+            </div>
+            <div>
+                <label>(Furniture Only) Name: </label>
+                <input type="text" id="furnName">
+            </div>
+            <div class="numInput">
+                <h3>Length (Inches)</h3>
+                <input type="number" min="1" value="12" id="Length">
+            </div>
+            <div class="numInput">
+                <h3>Width (Inches)</h3>
+                <input type="number" min="1" value="12" id="Width">
+            </div>
+            
+            <button id="AddFurnitureBtn">Add Furniture</button>
+            <button id="RoomEditBtn">Edit Room</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
