@@ -3,10 +3,12 @@ body {
     transition-timing-function: linear;
     transition-duration: 500ms;
 }
-
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+}
 #house {
     font-size: 50px;
-    background-color: aqua;
+    background-color: rgb(153, 255, 255);
     border-radius: 30px;
     width: fit-content;
     display: inline-block;
@@ -21,6 +23,9 @@ body {
 }
 #input {
     margin-top: 30px;
+}
+#input label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 #input input {
     font-size: 40px;

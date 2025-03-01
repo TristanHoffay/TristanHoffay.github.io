@@ -1,5 +1,7 @@
 const house = document.getElementById("house");
 const answer = document.getElementById("answer");
+const spd_lbl = document.getElementById("speed_label");
+
 const font_dirs = {
     "DelaGothicOne-Regular": "fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf",
     "NotoSansJP-VariableFont_wght": "fonts/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf",
@@ -58,6 +60,7 @@ function changeFont() {
 range_input.addEventListener('input', function() {
     clearInterval(timer);
     timer = setInterval(randomFont, 1000 / range_input.value);
+    spd_lbl.innerHTML = range_input.value + " per second";
 })
 var timer = setInterval(randomFont, 1000);
 
